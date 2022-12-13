@@ -153,6 +153,7 @@ class CardItem extends StatelessWidget {
                               style: TextStyle(
                                 color: AppColors.textColor,
                                 fontSize: 18.sp,
+                                fontWeight: FontWeight.w600,
                               ),
                             ),
                             TextSpan(
@@ -315,6 +316,7 @@ class CardItem extends StatelessWidget {
                           /* dataList.ordersList[0].ordersActive, */
                           style: TextStyle(
                             fontSize: 18.sp,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                         TextSpan(
