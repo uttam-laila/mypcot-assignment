@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:injectable/injectable.dart';
 import 'package:mypcot_assignment/application/home_provider/providers.dart';
 import 'package:mypcot_assignment/core/app_theme.dart';
+import 'package:mypcot_assignment/core/constants.dart';
 import 'package:mypcot_assignment/injection.dart';
 import 'package:mypcot_assignment/presentation/home_screen.dart';
 import 'package:provider/provider.dart';
@@ -17,16 +18,15 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(milliseconds: 1)).then(
       (value) => SystemChrome.setSystemUIOverlayStyle(
-        const SystemUiOverlayStyle(
-          systemNavigationBarColor: Colors.black,
-          systemNavigationBarDividerColor: Colors.black,
+         SystemUiOverlayStyle(
+          systemNavigationBarColor: AppColors.black,
+          systemNavigationBarDividerColor: AppColors.black,
           systemNavigationBarIconBrightness: Brightness.light,
-          statusBarColor: Colors.black,
+          statusBarColor: AppColors.black,
           statusBarBrightness: Brightness.light,
           statusBarIconBrightness: Brightness.light,
         ),
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
     SystemChrome.setEnabledSystemUIMode(
       SystemUiMode.manual,
       overlays: [
-        SystemUiOverlay.top, // Shows Status bar and hides Navigation bar
+        SystemUiOverlay.top,
       ],
     );
     SystemChrome.setPreferredOrientations(

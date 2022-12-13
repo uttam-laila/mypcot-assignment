@@ -1,4 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -36,7 +35,6 @@ class CardItem extends StatelessWidget {
                     16.sp,
                   ),
                 ),
-                //ORDERS IMAGE
                 child: Row(
                   children: [
                     SizedBox(
@@ -66,7 +64,6 @@ class CardItem extends StatelessWidget {
                         SizedBox(
                           height: 14.h,
                         ),
-                        //ORDERS BUTTON
                         Container(
                           width: index == 0
                               ? 100.w
@@ -134,8 +131,7 @@ class CardItem extends StatelessWidget {
                             color: AppColors.black.withOpacity(0.1),
                             spreadRadius: 2,
                             blurRadius: 2,
-                            offset: const Offset(
-                                0, 3), // changes position of shadow
+                            offset: const Offset(0, 3),
                           ),
                         ],
                         borderRadius: BorderRadius.circular(
@@ -160,12 +156,20 @@ class CardItem extends StatelessWidget {
                               ),
                             ),
                             TextSpan(
-                              text: index == 1
-                                  ? ' Active subscription'
-                                  : ' Pending Orders from',
+                              text: index == 1 ? ' Active ' : ' Pending ',
                               style: TextStyle(
                                 color: AppColors.textColor,
                                 fontSize: 12.sp,
+                              ),
+                            ),
+                            TextSpan(
+                              text: index == 1
+                                  ? '  subscription'
+                                  : '  Orders from',
+                              style: TextStyle(
+                                color: AppColors.textColor,
+                                fontSize: 14.sp,
+                                fontWeight: FontWeight.w500,
                               ),
                             ),
                           ],
@@ -197,8 +201,6 @@ class CardItem extends StatelessWidget {
                                   ),
                                 ),
                               ),
-
-                              //image2
                               Positioned(
                                 left: 26.w,
                                 bottom: 0,
@@ -244,8 +246,7 @@ class CardItem extends StatelessWidget {
                             color: AppColors.black.withOpacity(0.1),
                             spreadRadius: 2,
                             blurRadius: 2,
-                            offset: const Offset(
-                                0, 3), // changes position of shadow
+                            offset: const Offset(0, 3),
                           ),
                         ],
                         borderRadius: BorderRadius.circular(
@@ -284,7 +285,6 @@ class CardItem extends StatelessWidget {
                 ),
               ),
             ),
-
           if (index == 2 || index == 1)
             Positioned(
               bottom: index == 1 ? 18.h : 12.h,
@@ -296,7 +296,7 @@ class CardItem extends StatelessWidget {
                       color: Colors.black.withOpacity(0.1),
                       spreadRadius: 2,
                       blurRadius: 2,
-                      offset: const Offset(0, 3), // changes position of shadow
+                      offset: const Offset(0, 3),
                     ),
                   ],
                   borderRadius: BorderRadius.circular(
@@ -338,13 +338,40 @@ class CardItem extends StatelessWidget {
             ),
           if (index == 2)
             Positioned(
-                bottom: 29.h,
-                right: 10.w,
-                child: SizedBox(
-                  width: 65.w,
-                  child: Stack(
-                    children: [
-                      Container(
+              bottom: 29.h,
+              right: 10.w,
+              child: SizedBox(
+                width: 65.w,
+                child: Stack(
+                  children: [
+                    Container(
+                      height: 25.sp,
+                      width: 25.sp,
+                      decoration: BoxDecoration(
+                        border: Border.all(
+                          width: 1.sp,
+                          color: Colors.lightBlue,
+                        ),
+                        color: Colors.blue.withOpacity(0.5),
+                        shape: BoxShape.circle,
+                        image: const DecorationImage(
+                          image: NetworkImage(
+                            'https://randomuser.me/api/portraits/women/72.jpg',
+                          ),
+                        ),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.only(top: 12.h, left: 12.h),
+                        child: Icon(
+                          Icons.circle,
+                          color: AppColors.lightGreen,
+                          size: 10.sp,
+                        ),
+                      ),
+                    ),
+                    Positioned(
+                      left: 20.w,
+                      child: Container(
                         height: 25.sp,
                         width: 25.sp,
                         decoration: BoxDecoration(
@@ -356,7 +383,7 @@ class CardItem extends StatelessWidget {
                           shape: BoxShape.circle,
                           image: const DecorationImage(
                             image: NetworkImage(
-                              'https://randomuser.me/api/portraits/women/72.jpg',
+                              'https://randomuser.me/api/portraits/men/72.jpg',
                             ),
                           ),
                         ),
@@ -369,66 +396,39 @@ class CardItem extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Positioned(
-                        left: 20.w,
-                        child: Container(
-                          height: 25.sp,
-                          width: 25.sp,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              width: 1.sp,
-                              color: Colors.lightBlue,
-                            ),
-                            color: Colors.blue.withOpacity(0.5),
-                            shape: BoxShape.circle,
-                            image: const DecorationImage(
-                              image: NetworkImage(
-                                'https://randomuser.me/api/portraits/men/72.jpg',
-                              ),
-                            ),
+                    ),
+                    Positioned(
+                      left: 40.w,
+                      child: Container(
+                        height: 25.sp,
+                        width: 25.sp,
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 1.sp,
+                            color: Colors.lightBlue,
                           ),
-                          child: Padding(
-                            padding: EdgeInsets.only(top: 12.h, left: 12.h),
-                            child: Icon(
-                              Icons.circle,
-                              color: AppColors.lightGreen,
-                              size: 10.sp,
+                          color: Colors.blue.withOpacity(0.5),
+                          shape: BoxShape.circle,
+                          image: const DecorationImage(
+                            image: NetworkImage(
+                              'https://randomuser.me/api/portraits/women/45.jpg',
                             ),
                           ),
                         ),
-                      ),
-                      Positioned(
-                        left: 40.w,
-                        child: Container(
-                          height: 25.sp,
-                          width: 25.sp,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              width: 1.sp,
-                              color: Colors.lightBlue,
-                            ),
-                            color: Colors.blue.withOpacity(0.5),
-                            shape: BoxShape.circle,
-                            image: const DecorationImage(
-                              image: NetworkImage(
-                                'https://randomuser.me/api/portraits/women/45.jpg',
-                              ),
-                            ),
-                          ),
-                          child: Padding(
-                            padding: EdgeInsets.only(top: 12.h, left: 12.h),
-                            child: Icon(
-                              Icons.circle,
-                              color: AppColors.lightGreen,
-                              size: 10.sp,
-                            ),
+                        child: Padding(
+                          padding: EdgeInsets.only(top: 12.h, left: 12.h),
+                          child: Icon(
+                            Icons.circle,
+                            color: AppColors.lightGreen,
+                            size: 10.sp,
                           ),
                         ),
                       ),
-                    ],
-                  ),
-                )),
-          //ORANGE CARD
+                    ),
+                  ],
+                ),
+              ),
+            ),
           Positioned(
             top: 0,
             right: 39.w,
@@ -457,77 +457,77 @@ class CardItem extends StatelessWidget {
                               ? AppColors.blue
                               : AppColors.pink,
                     ),
-                    child: Text.rich(
-                      TextSpan(
-                        children: index == 0
-                            ? <InlineSpan>[
-                                TextSpan(
-                                  text: 'You have',
-                                  style: TextStyle(
-                                    fontSize: 12.sp,
-                                    color: AppColors.white,
+                    child: Padding(
+                      padding: EdgeInsets.all(8.sp),
+                      child: Text.rich(
+                        TextSpan(
+                          children: index == 0
+                              ? <InlineSpan>[
+                                  TextSpan(
+                                    text: 'You have',
+                                    style: TextStyle(
+                                      fontSize: 12.sp,
+                                      color: AppColors.white,
+                                    ),
                                   ),
-                                ),
-                                TextSpan(
-                                  text: '3',
-                                  /* dataList.ordersList[0].ordersActive, */
-                                  style: TextStyle(
-                                    fontSize: 18.sp,
-                                    color: AppColors.white,
+                                  TextSpan(
+                                    text: ' 3',
+                                    /* dataList.ordersList[0].ordersActive, */
+                                    style: TextStyle(
+                                      fontSize: 18.sp,
+                                      color: AppColors.white,
+                                    ),
                                   ),
-                                ),
-                                TextSpan(
-                                  text: ' active orders from',
-                                  style: TextStyle(
-                                    fontSize: 12.sp,
-                                    color: AppColors.white,
+                                  TextSpan(
+                                    text: ' active orders from',
+                                    style: TextStyle(
+                                      fontSize: 12.sp,
+                                      color: AppColors.white,
+                                    ),
                                   ),
-                                ),
-                              ]
-                            : index == 1
-                                ? [
-                                    TextSpan(
-                                      text: '03',
-                                      style: TextStyle(
-                                        fontSize: 18.sp,
-                                        fontWeight: FontWeight.w600,
-                                        color: AppColors.white,
+                                ]
+                              : index == 1
+                                  ? [
+                                      TextSpan(
+                                        text: '03',
+                                        style: TextStyle(
+                                          fontSize: 18.sp,
+                                          fontWeight: FontWeight.w600,
+                                          color: AppColors.white,
+                                        ),
                                       ),
-                                    ),
-                                    TextSpan(
-                                      text: ' deliveries pending for',
-                                      /* dataList.ordersList[0].ordersActive, */
-                                      style: TextStyle(
-                                        fontSize: 12.sp,
-                                        color: AppColors.white,
+                                      TextSpan(
+                                        text: ' deliveries pending for',
+                                        /* dataList.ordersList[0].ordersActive, */
+                                        style: TextStyle(
+                                          fontSize: 12.sp,
+                                          color: AppColors.white,
+                                        ),
                                       ),
-                                    ),
-                                  ]
-                                : [
-                                    TextSpan(
-                                      text: '15',
-                                      style: TextStyle(
-                                        fontSize: 18.sp,
-                                        fontWeight: FontWeight.w600,
-                                        color: AppColors.white,
+                                    ]
+                                  : [
+                                      TextSpan(
+                                        text: '15',
+                                        style: TextStyle(
+                                          fontSize: 18.sp,
+                                          fontWeight: FontWeight.w600,
+                                          color: AppColors.white,
+                                        ),
                                       ),
-                                    ),
-                                    TextSpan(
-                                      text: ' New customers',
-                                      /* dataList.ordersList[0].ordersActive, */
-                                      style: TextStyle(
-                                        fontSize: 12.sp,
-                                        color: AppColors.white,
+                                      TextSpan(
+                                        text: ' New customers',
+                                        /* dataList.ordersList[0].ordersActive, */
+                                        style: TextStyle(
+                                          fontSize: 12.sp,
+                                          color: AppColors.white,
+                                        ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                        ),
+                        textAlign: TextAlign.center,
                       ),
-                      textAlign: TextAlign.center,
                     ),
                   ),
-
-                  //3 IMAGES
-                  //image1
                   Positioned(
                     left: 18.w,
                     bottom: 0,
@@ -552,8 +552,6 @@ class CardItem extends StatelessWidget {
                               ),
                             ),
                           ),
-
-                          //image2
                           Positioned(
                             left: 26.w,
                             bottom: 0,
@@ -575,8 +573,6 @@ class CardItem extends StatelessWidget {
                               ),
                             ),
                           ),
-
-                          //image3
                           Positioned(
                             left: 52.w,
                             bottom: 0,

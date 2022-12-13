@@ -31,7 +31,7 @@ class DateWidget extends StatelessWidget {
         Text(
           date,
           style: TextStyle(
-              fontSize: 14.sp, fontWeight: FontWeight.w500, color: colorDate),
+              fontSize: 14.sp, fontWeight: FontWeight.w600, color: colorDate),
         ),
       ],
     );

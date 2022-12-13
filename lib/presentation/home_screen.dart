@@ -151,7 +151,6 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-
           Container(
             padding: EdgeInsets.symmetric(
               horizontal: 24.w,
@@ -184,7 +183,6 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-
                 Container(
                   decoration: BoxDecoration(
                     color: AppColors.white,
@@ -194,8 +192,7 @@ class HomeScreen extends StatelessWidget {
                         color: AppColors.black.withOpacity(0.1),
                         spreadRadius: 7,
                         blurRadius: 11,
-                        offset:
-                            const Offset(0, 3), 
+                        offset: const Offset(0, 3),
                       ),
                     ],
                   ),
@@ -209,7 +206,6 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-
           Container(
             height: 242.h,
             margin: EdgeInsets.all(12.sp),
@@ -250,7 +246,6 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ],
                 ),
-
                 Container(
                   width: 120.w,
                   decoration: BoxDecoration(
@@ -261,8 +256,7 @@ class HomeScreen extends StatelessWidget {
                         color: Colors.black.withOpacity(0.1),
                         spreadRadius: 7,
                         blurRadius: 11,
-                        offset:
-                            const Offset(0, 3), 
+                        offset: const Offset(0, 3),
                       ),
                     ],
                   ),
@@ -284,7 +278,6 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-
                 Container(
                   width: 100.w,
                   decoration: BoxDecoration(
@@ -295,8 +288,7 @@ class HomeScreen extends StatelessWidget {
                         color: Colors.black.withOpacity(0.1),
                         spreadRadius: 7,
                         blurRadius: 11,
-                        offset:
-                            const Offset(0, 3), 
+                        offset: const Offset(0, 3),
                       ),
                     ],
                   ),
@@ -394,8 +386,6 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-
-          ///
           SizedBox(
             height: 30.h,
           ),
@@ -411,7 +401,7 @@ class HomeScreen extends StatelessWidget {
                   color: AppColors.black.withOpacity(0.1),
                   spreadRadius: 7,
                   blurRadius: 11,
-                  offset: const Offset(0, 3), 
+                  offset: const Offset(0, 3),
                 ),
               ],
             ),
