@@ -193,7 +193,7 @@ class CardItem extends StatelessWidget {
                                     width: 2.sp,
                                     color: AppColors.pink,
                                   ),
-                                  color: Colors.blue.withOpacity(0.5),
+                                  color: AppColors.red,
                                   shape: BoxShape.circle,
                                   image: const DecorationImage(
                                     image: NetworkImage(
@@ -212,7 +212,7 @@ class CardItem extends StatelessWidget {
                                       width: 2.sp,
                                       color: AppColors.pink,
                                     ),
-                                    color: Colors.blue.withOpacity(0.5),
+                                    color: AppColors.red,
                                     shape: BoxShape.circle,
                                     image: const DecorationImage(
                                       image: NetworkImage(
@@ -293,7 +293,7 @@ class CardItem extends StatelessWidget {
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.1),
+                      color: AppColors.black.withOpacity(0.1),
                       spreadRadius: 2,
                       blurRadius: 2,
                       offset: const Offset(0, 3),
@@ -302,7 +302,7 @@ class CardItem extends StatelessWidget {
                   borderRadius: BorderRadius.circular(
                     12.sp,
                   ),
-                  color: Colors.white,
+                  color: AppColors.white,
                 ),
                 height: 60.h,
                 width: 95.w,
@@ -350,9 +350,9 @@ class CardItem extends StatelessWidget {
                       decoration: BoxDecoration(
                         border: Border.all(
                           width: 1.sp,
-                          color: Colors.lightBlue,
+                          color: AppColors.skyBlue,
                         ),
-                        color: Colors.blue.withOpacity(0.5),
+                        color: AppColors.skyBlue,
                         shape: BoxShape.circle,
                         image: const DecorationImage(
                           image: NetworkImage(
@@ -377,9 +377,9 @@ class CardItem extends StatelessWidget {
                         decoration: BoxDecoration(
                           border: Border.all(
                             width: 1.sp,
-                            color: Colors.lightBlue,
+                            color: AppColors.skyBlue,
                           ),
-                          color: Colors.blue.withOpacity(0.5),
+                          color: AppColors.skyBlue,
                           shape: BoxShape.circle,
                           image: const DecorationImage(
                             image: NetworkImage(
@@ -405,9 +405,9 @@ class CardItem extends StatelessWidget {
                         decoration: BoxDecoration(
                           border: Border.all(
                             width: 1.sp,
-                            color: Colors.lightBlue,
+                            color: AppColors.skyBlue,
                           ),
-                          color: Colors.blue.withOpacity(0.5),
+                          color: AppColors.skyBlue,
                           shape: BoxShape.circle,
                           image: const DecorationImage(
                             image: NetworkImage(
@@ -541,9 +541,17 @@ class CardItem extends StatelessWidget {
                             decoration: BoxDecoration(
                               border: Border.all(
                                 width: 2.sp,
-                                color: AppColors.pink,
+                                color: index == 0
+                                    ? AppColors.pink
+                                    : index == 1
+                                        ? AppColors.blue
+                                        : AppColors.skyBlue,
                               ),
-                              color: Colors.blue.withOpacity(0.5),
+                              color: index == 0
+                                  ? AppColors.pink
+                                  : index == 1
+                                      ? AppColors.blue
+                                      : AppColors.skyBlue,
                               shape: BoxShape.circle,
                               image: const DecorationImage(
                                 image: NetworkImage(
@@ -561,9 +569,17 @@ class CardItem extends StatelessWidget {
                               decoration: BoxDecoration(
                                 border: Border.all(
                                   width: 2.sp,
-                                  color: AppColors.pink,
+                                  color: index == 0
+                                      ? AppColors.pink
+                                      : index == 1
+                                          ? AppColors.blue
+                                          : AppColors.skyBlue,
                                 ),
-                                color: Colors.blue.withOpacity(0.5),
+                                color: index == 0
+                                    ? AppColors.pink
+                                    : index == 1
+                                        ? AppColors.blue
+                                        : AppColors.skyBlue,
                                 shape: BoxShape.circle,
                                 image: const DecorationImage(
                                   image: NetworkImage(
@@ -582,9 +598,17 @@ class CardItem extends StatelessWidget {
                               decoration: BoxDecoration(
                                 border: Border.all(
                                   width: 2.sp,
-                                  color: AppColors.pink,
+                                  color: index == 0
+                                      ? AppColors.pink
+                                      : index == 1
+                                          ? AppColors.blue
+                                          : AppColors.skyBlue,
                                 ),
-                                color: Colors.red,
+                                color: index == 0
+                                    ? AppColors.pink
+                                    : index == 1
+                                        ? AppColors.blue
+                                        : AppColors.skyBlue,
                                 shape: BoxShape.circle,
                                 image: const DecorationImage(
                                   image: NetworkImage(
