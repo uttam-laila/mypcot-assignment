@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:injectable/injectable.dart';
 import 'package:mypcot_assignment/application/home_provider/providers.dart';
 import 'package:mypcot_assignment/core/app_theme.dart';
+import 'package:mypcot_assignment/injection.dart';
 import 'package:mypcot_assignment/presentation/home_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
+  configureInjection(Environment.dev);
   runApp(const MyApp());
 }
 
@@ -41,8 +44,9 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: List.from(providers),
       child: ScreenUtilInit(
-        designSize: const Size(375, 812),
+        designSize: const Size(360, 786),
         builder: (BuildContext context, _) => MaterialApp(
+          debugShowCheckedModeBanner: false,
           title: 'Mypcot Assignment',
           theme: appTheme,
           initialRoute: '/homeScreen',
